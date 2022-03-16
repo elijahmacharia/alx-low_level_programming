@@ -1,6 +1,4 @@
-nclude "main.h"
-
-
+#include "main.h"
 
 /**
  * _isalpha - checks for alphabetic character
@@ -8,9 +6,6 @@ nclude "main.h"
  *
  * Return: 1 (if letter)
  */
-
-
-
 int _isalpha(int c)
 {
 if (c >= 'a' && c <= 'z')
