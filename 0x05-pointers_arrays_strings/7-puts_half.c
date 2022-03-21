@@ -1,28 +1,35 @@
 #include "main.h"
 /**
- *rev_string - reverse the string.
- *@s: pointer to string.
+ *puts_half - prints half of a string.
+ *@str: pointer to string.
  *
  *Return: void.
  */
-void rev_string(char *s)
+void puts_half(char *str)
 {
-	int i, j, k, temp;
+	int n, length, mid;
 
-	i = 0;
-	while (s[i] != '\0')
+	length = 0;
+	while (str[length] != '\0')
 	{
-		i++;
+		length++;
 	}
-	k = 0;
-	j = i - 1;
 
-	while (k < j)
+	if (length % 2 == 0)
 	{
-		temp = s[k];
-		s[k] = s[j];
-		s[j] = temp;
-		k++;
-		j--;
+		mid = length / 2;
+		for (n = mid; n < length; n++)
+		{
+			_putchar(str[n]);
+		}
 	}
+	else
+	{
+		mid = (length - 1) / 2;
+		for (n = mid + 1; n < length; n++)
+		{
+			_putchar(str[n]);
+		}
+	}
+	_putchar('\n');
 }
